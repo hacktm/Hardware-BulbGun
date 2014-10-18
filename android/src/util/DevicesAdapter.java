@@ -19,15 +19,14 @@ import com.example.bulbgun.R;
 public class DevicesAdapter extends BaseAdapter {
 	private List<BluetoothDevice> pairedDevice;
 	private Activity activity;
-	private BluetoothDevice lastBluetoothDevice;
+	private String lastBluetoothDeviceMac;
 	private boolean lightOn = false;
 
 	public DevicesAdapter(Activity activity,
-			List<BluetoothDevice> pairedDevice,
-			BluetoothDevice lastBluetoothDevice) {
+			List<BluetoothDevice> pairedDevice, String lastBluetoothDeviceMac) {
 		this.activity = activity;
 		this.pairedDevice = pairedDevice;
-		this.lastBluetoothDevice = lastBluetoothDevice;
+		this.lastBluetoothDeviceMac = lastBluetoothDeviceMac;
 
 	}
 
@@ -72,9 +71,9 @@ public class DevicesAdapter extends BaseAdapter {
 		holder.name.setText(pairedDevice.get(position).getName());
 		holder.mac.setText(pairedDevice.get(position).getAddress());
 
-		if (lastBluetoothDevice != null) {
+		if (lastBluetoothDeviceMac != null) {
 			if (!pairedDevice.get(position).getAddress()
-					.equals(lastBluetoothDevice.getAddress())) {
+					.equals(lastBluetoothDeviceMac)) {
 
 				Log.d("holder.isConnected", String.valueOf(position));
 				holder.isConnected.setVisibility(View.INVISIBLE);

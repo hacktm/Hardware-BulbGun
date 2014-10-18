@@ -38,45 +38,6 @@ public class BluetoothSetup {
 
 	private final static int REQUEST_ENABLE_BT = 1;
 
-	public ArrayList<BluetoothDevice> getbdev() {
-		ArrayList<BluetoothDevice> mArrayAdapter = new ArrayList<BluetoothDevice>();
-
-		BluetoothAdapter mBluetoothAdapter = BluetoothAdapter
-				.getDefaultAdapter();
-		if (mBluetoothAdapter == null) {
-			// Device does not support Bluetooth
-		}
-		if (!mBluetoothAdapter.isEnabled()) {
-			Intent enableBtIntent = new Intent(
-					BluetoothAdapter.ACTION_REQUEST_ENABLE);
-			act.startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
-		}
-
-		Set<BluetoothDevice> pairedDevices = mBluetoothAdapter
-				.getBondedDevices();
-		// If there are paired devices
-		if (pairedDevices.size() > 0) {
-			// Loop through paired devices
-			for (BluetoothDevice device : pairedDevices) {
-
-				// Add the name and address to an array adapter to show in a
-				// ListView
-
-				mArrayAdapter.add(device);
-			}
-		}
-
-		return mArrayAdapter;
-	}
-
-	public String[] getbdevTitles(ArrayList<BluetoothDevice> devices) {
-		ArrayList<String> out = new ArrayList<String>();
-		for (BluetoothDevice bd : devices) {
-			out.add(bd.getName());
-		}
-		return out.toArray(new String[out.size()]);
-	}
-
 	public BluetoothDevice openBT(BluetoothDevice mmDevice) throws IOException {
 		UUID uuid = UUID.fromString("00001101-0000-1000-8000-00805f9b34fb"); // Standard
 		try { // SerialPortService
@@ -148,7 +109,7 @@ public class BluetoothSetup {
 		workerThread.start();
 	}
 
-	void sendData(String msg) throws IOException {
+	public void sendData(String msg) throws IOException {
 
 		msg += "\n";
 		mmOutputStream.write(msg.getBytes());
@@ -167,6 +128,34 @@ public class BluetoothSetup {
 		}
 		Log.d("BluetoothSetup", "Bluetooth Closed");
 
+	}
+
+	// return a list of paired devices
+	public static ArrayList<BluetoothDevice> findPairedDevices() {
+		BluetoothAdapter mBluetoothAdapter = BluetoothAdapter
+				.getDefaultAdapter();
+		Set<BluetoothDevice> pairedDevices = mBluetoothAdapter
+				.getBondedDevices();
+
+		ArrayList<BluetoothDevice> myDevices = new ArrayList<BluetoothDevice>();
+		// If there are paired devices
+		if (pairedDevices.size() > 0) {
+			// Loop through paired devices
+			for (BluetoothDevice device : pairedDevices) {
+				// Add the name and address to an array adapter to show in a
+				// ListView
+				if (device != null) {
+					// mArrayAdapter.add(device.getName() + "\n"
+					// + device.getAddress());
+					Log.d(device.getName().toString(), device.getAddress()
+							.toString());
+
+					myDevices.add(device);
+				}
+			}
+			return myDevices;
+		}
+		return null;
 	}
 
 }

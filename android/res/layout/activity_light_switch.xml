@@ -43,19 +43,6 @@
             android:text="Connect to bluetooth" />
     </RelativeLayout>
 
-    <RelativeLayout
-        android:id="@+id/connect_layout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="gone" >
 
-        <ListView
-            android:id="@+id/devices_list"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true" >
-        </ListView>
-    </RelativeLayout>
 
 </FrameLayout>
