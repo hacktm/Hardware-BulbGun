@@ -1,0 +1,63 @@
+int stare=0;
+int photocellPin = 0;
+int photocellReading;
+int LEDpin = 7;
+int LEDbrightness;
+
+int photocellPin2 = 1;
+int photocellReading2;
+int LEDpin2 = 8;
+int LEDbrightness2;
+int stare2=0;
+
+
+void setup(void){
+  
+  Serial.begin(9600);
+  pinMode(LEDpin,OUTPUT);
+  pinMode(LEDpin2, OUTPUT);
+  
+ }
+
+void loop(void){
+  Senzori();
+  delay(500);
+}
+
+
+
+void Senzori(){
+  photocellReading = analogRead(photocellPin);
+  Serial.print("Analog reading = ");
+  Serial.println(photocellReading);
+  photocellReading2 = analogRead(photocellPin2);
+  Serial.print("Analog reading2 = ");
+  Serial.println(photocellReading2);    
+ 
+  if(photocellReading>500){
+    stare++;
+    int x=stare%2;
+    if(x==0){
+      digitalWrite(LEDpin,LOW);
+    }else if(x==1){
+      digitalWrite(LEDpin,HIGH);
+      Serial.print("Step :");
+      Serial.println(stare);
+      }
+  }
+  
+  if(photocellReading2>500){
+    stare2++;
+    int y=stare2%2;
+    if(y==0){
+      digitalWrite(LEDpin2,LOW);
+    }else if(y==1){
+      //digitalWrite(RELAY_1, RELAY_ON);
+      LEDbrightness2 = map(photocellReading2, 0, 1023, 0, 255);
+      analogWrite(LEDpin2, LEDbrightness2);
+      }
+  }
+  
+}
+
+
