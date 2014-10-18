@@ -1,0 +1,14 @@
+﻿<xapCache source="D:\bulbgun\BluetoothExample\BluetoothClientWP8\Bin\Debug\BluetoothClientWP8_Debug_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="19.10.2014 1:53:24">
+  <file source="D:\bulbgun\BluetoothExample\BluetoothClientWP8\obj\Debug\BluetoothClientWP8.dll" archivePath="BluetoothClientWP8.dll" lastWriteTime="19.10.2014 1:53:23" />
+  <file source="D:\bulbgun\BluetoothExample\BluetoothClientWP8\Assets\AlignmentGrid.png" archivePath="Assets\AlignmentGrid.png" lastWriteTime="16.03.2013 1:36:08" />
+  <file source="D:\bulbgun\BluetoothExample\BluetoothClientWP8\Assets\Buttons\btn_off.png" archivePath="Assets\Buttons\btn_off.png" lastWriteTime="18.10.2014 19:39:19" />
+  <file source="D:\bulbgun\BluetoothExample\BluetoothClientWP8\Assets\Buttons\btn_on.png" archivePath="Assets\Buttons\btn_on.png" lastWriteTime="18.10.2014 19:39:19" />
+  <file source="D:\bulbgun\BluetoothExample\BluetoothClientWP8\Assets\Tiles\FlipCycleTileLarge.png" archivePath="Assets\Tiles\FlipCycleTileLarge.png" lastWriteTime="18.10.2014 21:17:16" />
+  <file source="D:\bulbgun\BluetoothExample\BluetoothClientWP8\Assets\Tiles\FlipCycleTileSmall.png" archivePath="Assets\Tiles\FlipCycleTileSmall.png" lastWriteTime="18.10.2014 21:19:17" />
+  <file source="D:\bulbgun\BluetoothExample\BluetoothClientWP8\Assets\Tiles\IconicTileMediumLarge.png" archivePath="Assets\Tiles\IconicTileMediumLarge.png" lastWriteTime="18.10.2014 21:19:50" />
+  <file source="D:\bulbgun\BluetoothExample\BluetoothClientWP8\Assets\Tiles\IconicTileSmall.png" archivePath="Assets\Tiles\IconicTileSmall.png" lastWriteTime="18.10.2014 21:20:26" />
+  <file source="D:\bulbgun\BluetoothExample\BluetoothClientWP8\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="18.10.2014 18:45:59" />
+  <file source="D:\bulbgun\BluetoothExample\BluetoothClientWP8\Bin\Debug\Assets\ApplicationIcon.png" archivePath="Assets\ApplicationIcon.png" lastWriteTime="18.10.2014 21:12:18" />
+  <file source="D:\bulbgun\BluetoothExample\BluetoothClientWP8\Bin\Debug\Assets\Tiles\FlipCycleTileMedium.png" archivePath="Assets\Tiles\FlipCycleTileMedium.png" lastWriteTime="18.10.2014 21:18:31" />
+  <file source="D:\bulbgun\BluetoothExample\BluetoothClientWP8\Bin\Debug\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="18.10.2014 21:21:47" />
+</xapCache>
