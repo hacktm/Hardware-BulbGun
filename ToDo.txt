@@ -1,6 +1,6 @@
 - relay  - done
 - bluetooth 
-- distance sensor
+- distance sensor - done
 - laser/fotodiode - done
 - clapping
 
