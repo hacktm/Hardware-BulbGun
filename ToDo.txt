@@ -1,0 +1,12 @@
+- relay
+- bluetooth
+- distance sensor
+- laser
+- clapping
+
+
+res:
+ - bulb
+ - pointer
+
+
