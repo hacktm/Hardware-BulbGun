@@ -1,0 +1,61 @@
+<!-- A DrawerLayout is intended to be used as the top-level content view using match_parent for both width and height to consume the full space available. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.bulbgun.LightSwitchActivity" >
+
+    <RelativeLayout
+        android:id="@+id/switch_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/connect_btn" >
+
+            <ToggleButton
+                android:id="@+id/toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:background="@drawable/check"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:onClick="onToggleClicked"
+                android:textOff=""
+                android:textOn="" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/connect_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/margin_small"
+            android:background="@android:color/holo_blue_dark"
+            android:text="Connect to bluetooth" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/connect_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" >
+
+        <ListView
+            android:id="@+id/devices_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true" >
+        </ListView>
+    </RelativeLayout>
+
+</FrameLayout>

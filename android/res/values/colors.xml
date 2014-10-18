@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="feaa_blue">#002E68</color>
+    <color name="feaa_blue_secondary">#003A84</color>
+    <color name="feaa_gray">#808080</color>
+    <color name="feaa_white">#EEEEEE</color>
+    <color name="menu_active">#33b5e5</color>
+    <color name="menu_inactive">#ccc</color>
+    <color name="transparent">#00000000</color>
+    <color name="feaa_bluesemitransparent">#55FFFFFF</color>
+    <color name="semitransparent">#a0124BB2</color>
+    <color name="white">#fff</color>
+    <color name="actionbar_background">#000055</color>
+    <color name="actionbar_text">#fff</color>
+
+    <!-- <color name="default_colors_1">#26B99B</color> -->
+    <!-- <color name="default_colors_2">#4EBA6F</color> -->
+    <!-- <color name="default_colors_3">#3D98D3</color> -->
+    <!-- <color name="default_colors_4">#955BA5</color> -->
+    <!-- <color name="default_colors_5">#F0C419</color> -->
+    <!-- <color name="default_colors_6">#E67E25</color> -->
+    <!-- <color name="default_colors_7">#E74D3C</color> -->
+    <!-- <color name="default_colors_8">#FF0000</color> -->
+
+
+    <!-- <array name="default_colors"> -->
+    <!-- <item>@color/default_colors_1</item> -->
+    <!-- <item>@color/default_colors_2</item> -->
+    <!-- <item>@color/default_colors_3</item> -->
+    <!-- <item>@color/default_colors_4</item> -->
+    <!-- <item>@color/default_colors_5</item> -->
+    <!-- <item>@color/default_colors_6</item> -->
+    <!-- <item>@color/default_colors_7</item> -->
+    <!-- <item>@color/default_colors_8</item> -->
+    <!-- </array> -->
+
+</resources>

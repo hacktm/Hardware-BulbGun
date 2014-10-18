@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/menu_selector"
+    android:paddingBottom="@dimen/margin_small"
+    android:paddingTop="@dimen/margin_small" >
+
+    <TextView
+        android:id="@+id/device_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/isConnected"
+        android:layout_toLeftOf="@+id/isConnected"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:paddingLeft="@dimen/margin_medium"
+        android:paddingRight="@dimen/margin_medium"
+        android:text="Device name"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_large" />
+
+    <ImageView
+        android:id="@+id/isConnected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/blueetooth" />
+
+    <TextView
+        android:id="@+id/device_mac"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/device_name"
+        android:layout_below="@+id/device_name"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:paddingLeft="@dimen/margin_medium"
+        android:paddingRight="@dimen/margin_medium"
+        android:text="Device mac"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_medium" />
+
+</RelativeLayout>
