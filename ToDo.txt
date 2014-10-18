@@ -1,9 +1,8 @@
-- relay
-- bluetooth
+- relay  - done
+- bluetooth 
 - distance sensor
-- laser
+- laser/fotodiode - done
 - clapping
-
 
 res:
  - bulb
