@@ -43,6 +43,14 @@ void setup()
  }
 
 void loop(){
+  Distance();
+  Bluetooth();
+  Senzori();
+  delay(500);
+  Serial1.print(String(stare1,DEC)+"\n");
+}
+
+void Distance(){
   long duration, distance;
   digitalWrite(trigPin, LOW);  // Added this line
   delayMicroseconds(2); // Added this line
@@ -54,31 +62,20 @@ void loop(){
   duration = pulseIn(echoPin, HIGH);
   distance = (duration/2) / 29.1;
   
-//  if (distance < 4) {  // This is where the LED On/Off happens
-//    digitalWrite(led,HIGH); // When the Red condition is met, the Green LED should turn off
-//    digitalWrite(led2,LOW);
-//  }
-//  else {
-//    digitalWrite(led,LOW);
-//    digitalWrite(led2,HIGH);
-//  }
-  
-  if (distance >= 200 || distance <= 0){
-    Serial.println("Out of range");
-    Serial.print(distance);
-    Serial.println("cm");
-  }
-  else {
-    Serial.print(distance);
-    Serial.println("cm");
+  Serial.print(distance);
+  Serial.println("cm");
+    
+  if (distance >= 5 && distance <= 30){
+    stare1=1-stare1;
+    if(stare1==0){      
+       digitalWrite(RELAY_1, RELAY_OFF);
+    }else if(stare1==1){
+       digitalWrite(RELAY_1, RELAY_ON);
+    }
   }
 
-
-  Bluetooth();
-  Senzori();
-  delay(500);
-  Serial1.print(String(stare1,DEC)+"\n");
 }
+
 
 void Bluetooth(){
   if(Serial1.available())
@@ -116,7 +113,7 @@ void Senzori(){
        digitalWrite(RELAY_1, RELAY_OFF);
     }else if(stare1==1){
        digitalWrite(RELAY_1, RELAY_ON);
-      }
+    }
   }
   
   if(photocellReading2>SWITCH){
